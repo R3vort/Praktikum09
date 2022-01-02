@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 9.4</title>
+</head>
+<body>
+
+    <div>
+        <h3>Pilih gambar dan game yang anda suka!</h3>
+        <table style="border: solid 1px;">
+            <tr>
+                <td>
+                    <label for="transportasi">Pilihlah Salah Satu Game di bawah ini!</label><br>
+                    <select id="transportasi">
+                        <option value="valo">Valorant</option>
+                        <option value="mine">Minecraft</option>
+                        <option value="grow">Growtopia</option>
+                        <option value="csgo">CSGO</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <button onclick="cetakGambar()">Cetak</button>
+    <br>
+        <div style="width: 150px; height: 150px; border-style: solid 1px;">
+            <img src="" id="gambar">
+        </div>
+    <script>
+        function cetakGambar() {
+            let transportasi = document.getElementById("transportasi");
+            let gambar = document.getElementById("gambar");
+
+            if (transportasi.value === "valo") {
+                gambar.src = "valo.jpg"
+                window.alert("Ini Game Valorant!")
+            }
+
+            if (transportasi.value === "mine") {
+                gambar.src = "mine.jpg"
+                window.alert("Ini Game Minecraft!")
+            }
+
+            if (transportasi.value === "grow") {
+                gambar.src = "grow.png"
+                window.alert("Ini Game Growtopia!")
+            }
+
+            if (transportasi.value === "csgo") {
+                gambar.src = "csgo.jpg"
+                window.alert("Ini game CSGO!")
+            }
+        }
+    </script>
+</body>
+</html>
